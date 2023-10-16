@@ -1,0 +1,46 @@
+{
+  "name": "api-notes-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "cross-env NODE_ENV=development ts-node-dev src/main.ts",
+    "start:test": "cross-env NODE_ENV=test ts-node-dev src/main.ts",
+    "start:production": "cross-env NODE_ENV=production ts-node-dev src/main.ts",
+    "lint": "eslint --ignore-path .eslintignore --ext .ts .",
+    "lint:fix": "npm run lint -- --fix",
+    "test:watch": "cross-env NODE_ENV=test jest --verbose --silent --watch ./src/__tests__/api/note.test.ts",
+    "start": "cross-env NODE_ENV=production node build/main.js",
+    "dist": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "jsonwebtoken": "9.0.2",
+    "pg": "8.11.3",
+    "pg-hstore": "2.3.4",
+    "sequelize": "6.33.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/bcryptjs": "^2.4.4",
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.19",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/node": "^20.8.6",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "colors": "^1.4.0",
+    "eslint": "^8.51.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  }
+}
